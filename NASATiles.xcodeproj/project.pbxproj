@@ -11,26 +11,15 @@
 		171461C324C6D4D3005F1702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171461C224C6D4D3005F1702 /* ViewController.swift */; };
 		171461C524C6D4D6005F1702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 171461C424C6D4D6005F1702 /* Assets.xcassets */; };
 		171461C824C6D4D6005F1702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171461C624C6D4D6005F1702 /* Main.storyboard */; };
-		171461D424C6D4D6005F1702 /* NASATilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171461D324C6D4D6005F1702 /* NASATilesTests.swift */; };
-		171461DF24C6D4D6005F1702 /* NASATilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171461DE24C6D4D6005F1702 /* NASATilesUITests.swift */; };
+		1717C17E24C850C400FD4F0B /* MapViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717C17D24C850C300FD4F0B /* MapViewWindow.swift */; };
+		1717C18024C850E600FD4F0B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717C17F24C850E600FD4F0B /* MapViewController.swift */; };
+		172F9E5824C9854C008797FF /* MainViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F9E5724C9854C008797FF /* MainViewWindow.swift */; };
+		172F9E5A24CAC866008797FF /* ImageMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F9E5924CAC866008797FF /* ImageMerger.swift */; };
+		172F9E5C24CAC878008797FF /* ImageMergeKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 172F9E5B24CAC878008797FF /* ImageMergeKernel.metal */; };
+		172F9E5E24CACB56008797FF /* ImageMergeParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */; };
+		174FF96D24C710F10063E643 /* QueryWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF96C24C710F10063E643 /* QueryWindow.swift */; };
+		174FF96F24C716660063E643 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF96E24C716660063E643 /* QueryController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		171461D024C6D4D6005F1702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 171461B524C6D4D3005F1702 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 171461BC24C6D4D3005F1702;
-			remoteInfo = NASATiles;
-		};
-		171461DB24C6D4D6005F1702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 171461B524C6D4D3005F1702 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 171461BC24C6D4D3005F1702;
-			remoteInfo = NASATiles;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		171461BD24C6D4D3005F1702 /* NASATiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASATiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,30 +29,18 @@
 		171461C724C6D4D6005F1702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		171461C924C6D4D6005F1702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171461CA24C6D4D6005F1702 /* NASATiles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NASATiles.entitlements; sourceTree = "<group>"; };
-		171461CF24C6D4D6005F1702 /* NASATilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASATilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		171461D324C6D4D6005F1702 /* NASATilesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATilesTests.swift; sourceTree = "<group>"; };
-		171461D524C6D4D6005F1702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		171461DA24C6D4D6005F1702 /* NASATilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASATilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		171461DE24C6D4D6005F1702 /* NASATilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATilesUITests.swift; sourceTree = "<group>"; };
-		171461E024C6D4D6005F1702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1717C17D24C850C300FD4F0B /* MapViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWindow.swift; sourceTree = "<group>"; };
+		1717C17F24C850E600FD4F0B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		172F9E5724C9854C008797FF /* MainViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWindow.swift; sourceTree = "<group>"; };
+		172F9E5924CAC866008797FF /* ImageMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMerger.swift; sourceTree = "<group>"; };
+		172F9E5B24CAC878008797FF /* ImageMergeKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageMergeKernel.metal; sourceTree = "<group>"; };
+		172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMergeParameters.swift; sourceTree = "<group>"; };
+		174FF96C24C710F10063E643 /* QueryWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWindow.swift; sourceTree = "<group>"; };
+		174FF96E24C716660063E643 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		171461BA24C6D4D3005F1702 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		171461CC24C6D4D6005F1702 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		171461D724C6D4D6005F1702 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				171461BF24C6D4D3005F1702 /* NASATiles */,
-				171461D224C6D4D6005F1702 /* NASATilesTests */,
-				171461DD24C6D4D6005F1702 /* NASATilesUITests */,
 				171461BE24C6D4D3005F1702 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,8 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				171461BD24C6D4D3005F1702 /* NASATiles.app */,
-				171461CF24C6D4D6005F1702 /* NASATilesTests.xctest */,
-				171461DA24C6D4D6005F1702 /* NASATilesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,30 +71,20 @@
 			children = (
 				171461C024C6D4D3005F1702 /* AppDelegate.swift */,
 				171461C224C6D4D3005F1702 /* ViewController.swift */,
+				172F9E5724C9854C008797FF /* MainViewWindow.swift */,
+				1717C17D24C850C300FD4F0B /* MapViewWindow.swift */,
+				1717C17F24C850E600FD4F0B /* MapViewController.swift */,
+				174FF96C24C710F10063E643 /* QueryWindow.swift */,
+				174FF96E24C716660063E643 /* QueryController.swift */,
 				171461C424C6D4D6005F1702 /* Assets.xcassets */,
 				171461C624C6D4D6005F1702 /* Main.storyboard */,
 				171461C924C6D4D6005F1702 /* Info.plist */,
 				171461CA24C6D4D6005F1702 /* NASATiles.entitlements */,
+				172F9E5924CAC866008797FF /* ImageMerger.swift */,
+				172F9E5B24CAC878008797FF /* ImageMergeKernel.metal */,
+				172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */,
 			);
 			path = NASATiles;
-			sourceTree = "<group>";
-		};
-		171461D224C6D4D6005F1702 /* NASATilesTests */ = {
-			isa = PBXGroup;
-			children = (
-				171461D324C6D4D6005F1702 /* NASATilesTests.swift */,
-				171461D524C6D4D6005F1702 /* Info.plist */,
-			);
-			path = NASATilesTests;
-			sourceTree = "<group>";
-		};
-		171461DD24C6D4D6005F1702 /* NASATilesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				171461DE24C6D4D6005F1702 /* NASATilesUITests.swift */,
-				171461E024C6D4D6005F1702 /* Info.plist */,
-			);
-			path = NASATilesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,42 +107,6 @@
 			productReference = 171461BD24C6D4D3005F1702 /* NASATiles.app */;
 			productType = "com.apple.product-type.application";
 		};
-		171461CE24C6D4D6005F1702 /* NASATilesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 171461E624C6D4D6005F1702 /* Build configuration list for PBXNativeTarget "NASATilesTests" */;
-			buildPhases = (
-				171461CB24C6D4D6005F1702 /* Sources */,
-				171461CC24C6D4D6005F1702 /* Frameworks */,
-				171461CD24C6D4D6005F1702 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				171461D124C6D4D6005F1702 /* PBXTargetDependency */,
-			);
-			name = NASATilesTests;
-			productName = NASATilesTests;
-			productReference = 171461CF24C6D4D6005F1702 /* NASATilesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		171461D924C6D4D6005F1702 /* NASATilesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 171461E924C6D4D6005F1702 /* Build configuration list for PBXNativeTarget "NASATilesUITests" */;
-			buildPhases = (
-				171461D624C6D4D6005F1702 /* Sources */,
-				171461D724C6D4D6005F1702 /* Frameworks */,
-				171461D824C6D4D6005F1702 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				171461DC24C6D4D6005F1702 /* PBXTargetDependency */,
-			);
-			name = NASATilesUITests;
-			productName = NASATilesUITests;
-			productReference = 171461DA24C6D4D6005F1702 /* NASATilesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,14 +118,6 @@
 				TargetAttributes = {
 					171461BC24C6D4D3005F1702 = {
 						CreatedOnToolsVersion = 12.0;
-					};
-					171461CE24C6D4D6005F1702 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 171461BC24C6D4D3005F1702;
-					};
-					171461D924C6D4D6005F1702 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 171461BC24C6D4D3005F1702;
 					};
 				};
 			};
@@ -216,8 +135,6 @@
 			projectRoot = "";
 			targets = (
 				171461BC24C6D4D3005F1702 /* NASATiles */,
-				171461CE24C6D4D6005F1702 /* NASATilesTests */,
-				171461D924C6D4D6005F1702 /* NASATilesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,20 +149,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		171461CD24C6D4D6005F1702 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		171461D824C6D4D6005F1702 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -254,40 +157,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				171461C324C6D4D3005F1702 /* ViewController.swift in Sources */,
+				172F9E5A24CAC866008797FF /* ImageMerger.swift in Sources */,
+				1717C18024C850E600FD4F0B /* MapViewController.swift in Sources */,
 				171461C124C6D4D3005F1702 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		171461CB24C6D4D6005F1702 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				171461D424C6D4D6005F1702 /* NASATilesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		171461D624C6D4D6005F1702 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				171461DF24C6D4D6005F1702 /* NASATilesUITests.swift in Sources */,
+				172F9E5E24CACB56008797FF /* ImageMergeParameters.swift in Sources */,
+				1717C17E24C850C400FD4F0B /* MapViewWindow.swift in Sources */,
+				174FF96F24C716660063E643 /* QueryController.swift in Sources */,
+				174FF96D24C710F10063E643 /* QueryWindow.swift in Sources */,
+				172F9E5824C9854C008797FF /* MainViewWindow.swift in Sources */,
+				172F9E5C24CAC878008797FF /* ImageMergeKernel.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		171461D124C6D4D6005F1702 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 171461BC24C6D4D3005F1702 /* NASATiles */;
-			targetProxy = 171461D024C6D4D6005F1702 /* PBXContainerItemProxy */;
-		};
-		171461DC24C6D4D6005F1702 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 171461BC24C6D4D3005F1702 /* NASATiles */;
-			targetProxy = 171461DB24C6D4D6005F1702 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		171461C624C6D4D6005F1702 /* Main.storyboard */ = {
@@ -458,90 +340,6 @@
 			};
 			name = Release;
 		};
-		171461E724C6D4D6005F1702 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4BB235M4GL;
-				INFOPLIST_FILE = NASATilesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = Irorio.NASATilesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASATiles.app/Contents/MacOS/NASATiles";
-			};
-			name = Debug;
-		};
-		171461E824C6D4D6005F1702 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4BB235M4GL;
-				INFOPLIST_FILE = NASATilesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = Irorio.NASATilesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASATiles.app/Contents/MacOS/NASATiles";
-			};
-			name = Release;
-		};
-		171461EA24C6D4D6005F1702 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4BB235M4GL;
-				INFOPLIST_FILE = NASATilesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Irorio.NASATilesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = NASATiles;
-			};
-			name = Debug;
-		};
-		171461EB24C6D4D6005F1702 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4BB235M4GL;
-				INFOPLIST_FILE = NASATilesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Irorio.NASATilesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = NASATiles;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,24 +357,6 @@
 			buildConfigurations = (
 				171461E424C6D4D6005F1702 /* Debug */,
 				171461E524C6D4D6005F1702 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		171461E624C6D4D6005F1702 /* Build configuration list for PBXNativeTarget "NASATilesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				171461E724C6D4D6005F1702 /* Debug */,
-				171461E824C6D4D6005F1702 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		171461E924C6D4D6005F1702 /* Build configuration list for PBXNativeTarget "NASATilesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				171461EA24C6D4D6005F1702 /* Debug */,
-				171461EB24C6D4D6005F1702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
