@@ -230,6 +230,7 @@ class QueryController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate
                         let TotalTime = Double(Int(End * 1000.0)) / 1000.0
                         let Results = "Loaded image in \(TotalTime) seconds. Image size is \(Size)"
                         self.ReturnedInfo.string = Results
+                        self.MetalTestButton.isEnabled = true
                     }
                 }
                 else
@@ -558,10 +559,12 @@ class QueryController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate
         let ImageMax = max(Image.size.width, Image.size.height)
         if ImageMax <= Longest
         {
+            print("resize returned early")
             return Image
         }
         let Ratio = Longest / ImageMax
         let NewSize = NSSize(width: Image.size.width * Ratio, height: Image.size.height * Ratio)
+        print(">>>> NewSize=\(NewSize)")
         let NewImage = NSImage(size: NewSize)
         NewImage.lockFocus()
         Image.draw(in: NSMakeRect(0, 0, NewSize.width, NewSize.height),
@@ -570,6 +573,7 @@ class QueryController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate
                    fraction: CGFloat(1))
         NewImage.unlockFocus()
         NewImage.size = NewSize
+        print("resized image to \(NewImage.size)")
         return NewImage
     }
     
@@ -577,12 +581,94 @@ class QueryController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate
     {
         OperationQueue.main.addOperation
         {
-        let FinalColor = CIColor(color: Color)
-        let MonoColor = CIFilter(name: "CIColorMonochrome", parameters: [kCIInputColorKey: FinalColor as Any])
+            let MonoColor = CIFilter(name: "CIColorMonochrome", parameters: [kCIInputColorKey: CIColor(color: Color) as Any])
             self.MapStatus.contentFilters = [MonoColor!]
         }
     }
     
+    @IBAction func TestMetalKernel(_ sender: Any)
+    {
+        let TileSize = 128
+        let BackgroundHeight = 10 * TileSize
+        let BackgroundWidth = 20 * TileSize
+        #if true
+        let Filler = SolidColorImage()
+        let Background = Filler.Fill(Width: BackgroundWidth, Height: BackgroundHeight, With: NSColor.brown)
+        #else
+        var Background = NSImage(size: NSSize(width: BackgroundWidth / 2, height: BackgroundHeight / 2))
+        Background.lockFocus()
+        NSColor.yellow.drawSwatch(in: NSRect(origin: .zero, size: Background.size))
+        Background.unlockFocus()
+        Background = self.ResizeImage(Image: Background, Longest: CGFloat(20 * TileSize))
+        #endif
+        let Colors = [NSColor.red, NSColor.green, NSColor.blue, NSColor.cyan, NSColor.magenta, NSColor.yellow]
+        if let Tile = TileView.image
+        {
+            #if true
+            let Flipper = ImageFlipper()
+            let Reducer = ImageResizer()
+            let RTile = Reducer.Resize(Tile, To: NSSize(width: 128, height: 128))
+            let Merger = ImageMerger()
+            var Final = Background
+            #if false
+            let ColorTile = Filler.Fill(Width: 100, Height: 100, With: Colors[0])
+            Final = Merger.Merge(Tile: ColorTile!, At: (X: 300, Y: 100), With: Background!)
+            Final = Flipper.FlipVertically(Source: Final!)
+            let ColorTile2 = Filler.Fill(Width: 200, Height: 100, With: Colors[1])
+            Final = Merger.Merge(Tile: ColorTile2!, At: (X: 200, Y: 100), With: Final!)
+            #else
+            for Count in 0 ... 5
+            {
+                let ColorTile = Filler.Fill(Width: 100, Height: 100, With: Colors[Count])
+                Final = Merger.Merge(Tile: ColorTile!, At: (X: (Count + 1) * 100, Y: 100), With: Final!)
+                Final = Flipper.FlipVertically(Source: Final!)
+//                Final = Merger.Merge(Tile: RTile!, At: (X: Count * 128, Y: 128), With: Final!)
+            }
+            #endif
+ 
+            let Storyboard = NSStoryboard(name: "Main", bundle: nil)
+            if let WindowController = Storyboard.instantiateController(withIdentifier: "MapViewWindow") as? MapViewWindow
+            {
+                if let Controller = WindowController.contentViewController as? MapViewController
+                {
+                    Controller.ShowImage(Final!)
+                    WindowController.showWindow(nil)
+                }
+            }
+            #else
+            let Flipper = ImageFlipper()
+            let Reducer = ImageResizer()
+            var Reduced2 = Reducer.Resize(Tile, To: NSSize(width: 128, height: 128))
+            //Reduced2 = Flipper.FlipVertically(Source: Reduced2!)
+            let Merger = ImageMerger()
+            if let Final = Merger.Merge(Tile: Reduced2!, At: (X: 500, Y: 128), With: Background!)
+            {
+                if let NextFinal = Merger.Merge(Tile: Reduced2!, At: (X: 500, Y: 128), With: Final)
+                {
+                    let Storyboard = NSStoryboard(name: "Main", bundle: nil)
+                    if let WindowController = Storyboard.instantiateController(withIdentifier: "MapViewWindow") as? MapViewWindow
+                    {
+                        if let Controller = WindowController.contentViewController as? MapViewController
+                        {
+                            Controller.ShowImage(NextFinal)
+                            WindowController.showWindow(nil)
+                        }
+                    }
+                }
+            }
+            else
+            {
+                print("Nil returned from Merge.")
+            }
+            #endif
+        }
+        else
+        {
+            print("Error retrieving tile from control.")
+        }
+    }
+    
+    @IBOutlet weak var MetalTestButton: NSButton!
     @IBOutlet weak var VerticalTileCount: NSTextField!
     @IBOutlet weak var HorizontalTileCount: NSTextField!
     @IBOutlet weak var FormatSegment: NSSegmentedControl!
