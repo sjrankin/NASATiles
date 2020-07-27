@@ -833,7 +833,7 @@
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="292" height="80"/>
-                                                        <size key="maxSize" width="292" height="10000000"/>
+                                                        <size key="maxSize" width="307" height="10000000"/>
                                                         <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     </textView>
                                                 </subviews>
@@ -1019,8 +1019,8 @@
                                                         </constraints>
                                                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="nF2-FG-WbQ">
                                                             <font key="font" metaFont="system"/>
-                                                            <date key="date" timeIntervalSinceReferenceDate="617169328.21872795">
-                                                                <!--2020-07-23 03:55:28 +0000-->
+                                                            <date key="date" timeIntervalSinceReferenceDate="617444466.98834395">
+                                                                <!--2020-07-26 08:21:06 +0000-->
                                                             </date>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1153,7 +1153,7 @@
                                                 </gridCell>
                                                 <gridCell row="9ki-Y5-bEK" column="xu6-I6-K4n" id="mn0-hc-Mbp">
                                                     <gridView key="contentView" ambiguous="YES" xPlacement="leading" yPlacement="center" rowAlignment="none" columnSpacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eca-Fs-Af4">
-                                                        <rect key="frame" x="77" y="54" width="95" height="22"/>
+                                                        <rect key="frame" x="77" y="54" width="360" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22" id="1c5-cr-zO5"/>
                                                             <constraint firstItem="tw2-Bz-Egj" firstAttribute="leading" secondItem="9nl-uC-0kk" secondAttribute="trailing" constant="2" id="Mw6-wy-KNM"/>
@@ -1284,7 +1284,7 @@
                                                             </gridCell>
                                                             <gridCell row="5qC-Gb-65W" column="y08-HK-Z65" id="ZyX-jU-K5i">
                                                                 <gridView key="contentView" ambiguous="YES" xPlacement="leading" yPlacement="center" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="hYW-Ld-SMC">
-                                                                    <rect key="frame" x="85" y="0.0" width="275" height="21"/>
+                                                                    <rect key="frame" x="281" y="0.0" width="79" height="21"/>
                                                                     <rows>
                                                                         <gridRow id="nkK-kn-b48"/>
                                                                     </rows>
@@ -1400,6 +1400,17 @@
                                     <action selector="HandleClosePressed:" target="QyU-7f-Srr" id="Sm1-65-wKn"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zND-hC-riw">
+                                <rect key="frame" x="665" y="13" width="103" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Metal Test" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P32-uf-Bc5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="TestMetalKernel:" target="QyU-7f-Srr" id="lX3-9x-kte"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="nz4-6o-Ik4" firstAttribute="baseline" secondItem="A0i-l9-M9Q" secondAttribute="baseline" id="2H4-Cn-dn7"/>
@@ -1423,6 +1434,7 @@
                         <outlet property="HorizontalTileCount" destination="91j-dn-jvX" id="ZfR-ff-boA"/>
                         <outlet property="LayerCombo" destination="5Na-Gz-nkD" id="8ec-OG-IJW"/>
                         <outlet property="MapStatus" destination="NNT-Vj-gO0" id="Pol-Jn-ee5"/>
+                        <outlet property="MetalTestButton" destination="zND-hC-riw" id="39L-6E-ZWo"/>
                         <outlet property="QueryTextBox" destination="zNU-pa-wZ5" id="Kpi-AD-IO4"/>
                         <outlet property="ReturnedInfo" destination="Ubc-dR-5MK" id="DL4-YM-g43"/>
                         <outlet property="RowStepper" destination="Cvc-Fl-ZmN" id="zwV-sf-6hh"/>
@@ -1728,7 +1740,7 @@
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-BA-mPf">
                                 <rect key="frame" x="17" y="47" width="671" height="346"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="groove" id="yGU-4I-CqK"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="yGU-4I-CqK"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zUB-FS-eAU">
                                 <rect key="frame" x="312" y="3" width="81" height="32"/>
