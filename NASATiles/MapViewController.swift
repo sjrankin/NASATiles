@@ -13,6 +13,8 @@ class MapViewController: NSViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        ImageOut.wantsLayer = true
+        ImageOut.layer?.backgroundColor = NSColor.systemTeal.cgColor
     }
     
     func ShowImage(_ Image: NSImage)
