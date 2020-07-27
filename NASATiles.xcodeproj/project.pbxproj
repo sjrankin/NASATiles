@@ -19,6 +19,13 @@
 		172F9E5E24CACB56008797FF /* ImageMergeParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */; };
 		174FF96D24C710F10063E643 /* QueryWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF96C24C710F10063E643 /* QueryWindow.swift */; };
 		174FF96F24C716660063E643 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF96E24C716660063E643 /* QueryController.swift */; };
+		1764B1C424CCF8DD0069E142 /* ImageFlipper.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1764B1C324CCF8DD0069E142 /* ImageFlipper.metal */; };
+		1764B1C624CD108E0069E142 /* ImageFlipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764B1C524CD108E0069E142 /* ImageFlipper.swift */; };
+		1764B1C924CD14150069E142 /* MetalLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764B1C824CD14150069E142 /* MetalLibrary.swift */; };
+		1764B1CC24CD36A90069E142 /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764B1CB24CD36A90069E142 /* ImageResizer.swift */; };
+		17C7593024CC057600F5C3C5 /* SolidColorKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 17C7592F24CC057600F5C3C5 /* SolidColorKernel.metal */; };
+		17C7593224CC06FE00F5C3C5 /* SolidColorParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7593124CC06FE00F5C3C5 /* SolidColorParameters.swift */; };
+		17C7593424CC076B00F5C3C5 /* SolidColorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7593324CC076B00F5C3C5 /* SolidColorImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMergeParameters.swift; sourceTree = "<group>"; };
 		174FF96C24C710F10063E643 /* QueryWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWindow.swift; sourceTree = "<group>"; };
 		174FF96E24C716660063E643 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
+		1764B1C324CCF8DD0069E142 /* ImageFlipper.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageFlipper.metal; sourceTree = "<group>"; };
+		1764B1C524CD108E0069E142 /* ImageFlipper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFlipper.swift; sourceTree = "<group>"; };
+		1764B1C824CD14150069E142 /* MetalLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalLibrary.swift; sourceTree = "<group>"; };
+		1764B1CB24CD36A90069E142 /* ImageResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		17C7592F24CC057600F5C3C5 /* SolidColorKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SolidColorKernel.metal; sourceTree = "<group>"; };
+		17C7593124CC06FE00F5C3C5 /* SolidColorParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidColorParameters.swift; sourceTree = "<group>"; };
+		17C7593324CC076B00F5C3C5 /* SolidColorImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidColorImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 		171461BF24C6D4D3005F1702 /* NASATiles */ = {
 			isa = PBXGroup;
 			children = (
+				171461C624C6D4D6005F1702 /* Main.storyboard */,
 				171461C024C6D4D3005F1702 /* AppDelegate.swift */,
 				171461C224C6D4D3005F1702 /* ViewController.swift */,
 				172F9E5724C9854C008797FF /* MainViewWindow.swift */,
@@ -77,14 +92,68 @@
 				174FF96C24C710F10063E643 /* QueryWindow.swift */,
 				174FF96E24C716660063E643 /* QueryController.swift */,
 				171461C424C6D4D6005F1702 /* Assets.xcassets */,
-				171461C624C6D4D6005F1702 /* Main.storyboard */,
 				171461C924C6D4D6005F1702 /* Info.plist */,
 				171461CA24C6D4D6005F1702 /* NASATiles.entitlements */,
-				172F9E5924CAC866008797FF /* ImageMerger.swift */,
-				172F9E5B24CAC878008797FF /* ImageMergeKernel.metal */,
-				172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */,
+				17C7593524CC2A9000F5C3C5 /* Metal */,
 			);
 			path = NASATiles;
+			sourceTree = "<group>";
+		};
+		1764B1C224CCF8C20069E142 /* ImageFlip */ = {
+			isa = PBXGroup;
+			children = (
+				1764B1C324CCF8DD0069E142 /* ImageFlipper.metal */,
+				1764B1C524CD108E0069E142 /* ImageFlipper.swift */,
+			);
+			path = ImageFlip;
+			sourceTree = "<group>";
+		};
+		1764B1C724CD13FF0069E142 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1764B1C824CD14150069E142 /* MetalLibrary.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1764B1CA24CD36900069E142 /* Resize */ = {
+			isa = PBXGroup;
+			children = (
+				1764B1CB24CD36A90069E142 /* ImageResizer.swift */,
+			);
+			path = Resize;
+			sourceTree = "<group>";
+		};
+		17C7593524CC2A9000F5C3C5 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				1764B1C724CD13FF0069E142 /* Common */,
+				1764B1C224CCF8C20069E142 /* ImageFlip */,
+				17C7593724CC2AA800F5C3C5 /* ImageMerge */,
+				17C7593624CC2A9A00F5C3C5 /* SolidColor */,
+				1764B1CA24CD36900069E142 /* Resize */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		17C7593624CC2A9A00F5C3C5 /* SolidColor */ = {
+			isa = PBXGroup;
+			children = (
+				17C7593124CC06FE00F5C3C5 /* SolidColorParameters.swift */,
+				17C7592F24CC057600F5C3C5 /* SolidColorKernel.metal */,
+				17C7593324CC076B00F5C3C5 /* SolidColorImage.swift */,
+			);
+			path = SolidColor;
+			sourceTree = "<group>";
+		};
+		17C7593724CC2AA800F5C3C5 /* ImageMerge */ = {
+			isa = PBXGroup;
+			children = (
+				172F9E5D24CACB56008797FF /* ImageMergeParameters.swift */,
+				172F9E5B24CAC878008797FF /* ImageMergeKernel.metal */,
+				172F9E5924CAC866008797FF /* ImageMerger.swift */,
+			);
+			path = ImageMerge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,11 +228,18 @@
 				171461C324C6D4D3005F1702 /* ViewController.swift in Sources */,
 				172F9E5A24CAC866008797FF /* ImageMerger.swift in Sources */,
 				1717C18024C850E600FD4F0B /* MapViewController.swift in Sources */,
+				17C7593224CC06FE00F5C3C5 /* SolidColorParameters.swift in Sources */,
 				171461C124C6D4D3005F1702 /* AppDelegate.swift in Sources */,
+				1764B1C924CD14150069E142 /* MetalLibrary.swift in Sources */,
 				172F9E5E24CACB56008797FF /* ImageMergeParameters.swift in Sources */,
+				17C7593424CC076B00F5C3C5 /* SolidColorImage.swift in Sources */,
 				1717C17E24C850C400FD4F0B /* MapViewWindow.swift in Sources */,
 				174FF96F24C716660063E643 /* QueryController.swift in Sources */,
+				17C7593024CC057600F5C3C5 /* SolidColorKernel.metal in Sources */,
+				1764B1C424CCF8DD0069E142 /* ImageFlipper.metal in Sources */,
 				174FF96D24C710F10063E643 /* QueryWindow.swift in Sources */,
+				1764B1C624CD108E0069E142 /* ImageFlipper.swift in Sources */,
+				1764B1CC24CD36A90069E142 /* ImageResizer.swift in Sources */,
 				172F9E5824C9854C008797FF /* MainViewWindow.swift in Sources */,
 				172F9E5C24CAC878008797FF /* ImageMergeKernel.metal in Sources */,
 			);
